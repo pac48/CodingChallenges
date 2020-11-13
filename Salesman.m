@@ -9,7 +9,7 @@ numCities = 15;
 gallNodes = zeros(100,4+numCities,'uint32');
 gallocs = 1;
 
-maxNodes = 3000;
+maxNodes = 1000;
 cities = [1 1].*rand(numCities,2); % col 1 is x and col 2 is y
 
 m = zeros(numCities,'uint32');
@@ -48,8 +48,9 @@ while notDone(node, gallNodes, numCities)
             openList(openListLen,:) = childNode;
         end
     end
-    [~, order] = sort(openList(ind:openListLen, score));
-    openList(ind:openListLen,:) = openList(ind+order-1, :);
+    tmp = ind:openListLen;
+    [~, order] = sort(openList(tmp, score));
+    openList(tmp,:) = openList(ind+order-1, :);
     node = openList(ind,:);
     openListLen = openListLen-1;
     if openListLen-ind > maxNodes
