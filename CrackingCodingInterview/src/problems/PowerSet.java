@@ -7,7 +7,7 @@ import java.util.Collections;
 
 // page 348
 public class PowerSet extends MyCode {
-    private ArrayList<Integer> set;
+    private final ArrayList<Integer> set;
 
     @Override
     public void run() {

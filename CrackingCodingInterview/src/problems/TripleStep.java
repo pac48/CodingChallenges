@@ -5,8 +5,8 @@ import utilities.MyCode;
 import java.util.HashMap;
 
 public class TripleStep extends MyCode {
-    private HashMap<Integer,Integer> memo;
-    private int numberStairs;
+    private final HashMap<Integer,Integer> memo;
+    private final int numberStairs;
     @Override
     public void run() {
         Common.print("The number of combinations is: ");
@@ -18,7 +18,6 @@ public class TripleStep extends MyCode {
         numberStairs = num;
     }
     private int findNumber(){
-        int numberStairs = 5;
         return recurse(numberStairs);
     }
     private int recurse( int n){

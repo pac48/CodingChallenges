@@ -8,10 +8,10 @@ import java.util.HashMap;
 
 
 public class MakeChange extends MyCode {
-    private HashMap<Integer,Integer> memo;
-    private HashMap<Coin,Integer> memo2;
-    private HashMap<Coin,Integer> combinations;
-    private int total;
+    private final HashMap<Integer,Integer> memo;
+    private final HashMap<Coin,Integer> memo2;
+    private final HashMap<Coin,Integer> combinations;
+    private final int total;
     @Override
     public void run() {
         Common.print("The number of combinations is: ");
